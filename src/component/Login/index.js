@@ -34,12 +34,21 @@ class Login extends Component {
       const {history} = this.props
       const data = await response.json()
       Cookies.set('jwt_token', data.jwt_token)
+      this.setState({showError: false, errorMsg: '', username: '', pin: ''})
       history.replace('/')
+    } else {
+      const data = await response.json()
+      this.setState({
+        showError: true,
+        errorMsg: data.error_msg,
+        username: '',
+        pin: '',
+      })
     }
   }
 
   render() {
-    const {username, pin} = this.state
+    const {username, pin, showError, errorMsg} = this.state
     const jwtToken = Cookies.get('jwt_token')
     if (jwtToken !== undefined) {
       return <Redirect to="/" />
@@ -88,6 +97,7 @@ class Login extends Component {
                 Login
               </button>
             </form>
+            {showError ? <p>{errorMsg}</p> : ''}
           </div>
         </div>
       </div>

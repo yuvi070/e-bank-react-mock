@@ -1,0 +1,17 @@
+.not-found-div {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.not-found-image {
+  width: 500px;
+}
+.not-found-heading {
+  color: #183b56;
+}
+
+.not-found-para {
+  color: #5a7184;
+}

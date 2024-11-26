@@ -1,0 +1,36 @@
+.home-main-div {
+  background-color: #152850;
+  height: 100vh;
+  padding-top: 30px;
+}
+
+.home-header-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 20%;
+  margin: auto;
+}
+.logout-button {
+  width: 100px;
+  height: 35px;
+  background-color: transparent;
+  border: 2px solid #c3cad9;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  color: #c3cad9;
+}
+
+.home-bottom-section {
+  height: 60%;
+  width: 60%;
+  color: white;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
